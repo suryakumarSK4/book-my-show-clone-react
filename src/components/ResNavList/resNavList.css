@@ -1,0 +1,40 @@
+.res-top {
+  display: none;
+  height: 70px;
+}
+.res-imgs {
+  display: flex;
+  align-items: center;
+  height: 90px;
+  width: 100%;
+}
+.imgs {
+  display: none;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  /* padding: 10px 0; */
+}
+
+.res-div::-webkit-scrollbar {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .res-top {
+    width: 100%;
+    display: inline;
+  }
+  .res-top .imgs {
+    display: block;
+  }
+}
+@media screen and (max-width: 430px) {
+  .res-imgs {
+    height: 80px;
+  }
+  .imgs {
+    height: 80px;
+    width: 80px;
+    margin: 0;
+  }
+}

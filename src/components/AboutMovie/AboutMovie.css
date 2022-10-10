@@ -1,0 +1,14 @@
+.componentTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(0, 0, 0);
+}
+.componentContent {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: rgb(51, 51, 51);
+  margin-top: 16px;
+}

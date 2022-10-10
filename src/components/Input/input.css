@@ -1,0 +1,28 @@
+/* input */
+.input-svg {
+  display: flex;
+  width: 549px;
+  height: 36px;
+  border-radius: 4px;
+  background-color: white;
+}
+.inside-svg {
+  width: 39px;
+  margin-right: 0;
+  align-items: center;
+}
+.inside-svg svg {
+  width: 13px;
+  height: 15px;
+  margin: 10px 12px;
+}
+.input-div {
+  display: flex;
+  width: 500px;
+  align-items: center;
+}
+.input-div p {
+  color: #9c9b99;
+  font-size: 14px;
+}
+/* input */

@@ -1,0 +1,30 @@
+.events {
+  max-height: 600px;
+  height: 100%;
+  padding: 48px 0 32px;
+  background-color: #f5f5f5;
+  width: auto;
+}
+.eve-cont h2 {
+  font-size: 1.5rem;
+}
+.eve-img {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  overflow: hidden;
+  overflow-x: visible;
+  gap: 8px 32px;
+  margin: 8px 0px 8px 0px;
+  min-width: 20.3125%;
+}
+.eve-imgs :last-child .eve-img-one {
+  margin-right: 0px;
+}
+.eve-img-one img {
+  height: 378px;
+  width: 222px;
+  padding-top: 5px;
+  border-radius: 10px;
+}
+/* events */

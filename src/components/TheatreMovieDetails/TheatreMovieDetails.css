@@ -1,0 +1,65 @@
+.mvContainer {
+  background: #333545;
+  color: #999;
+  padding: 41px 20px 22px;
+}
+.Detail {
+  width: 100%;
+  justify-content: space-between;
+}
+.filmDetails h1 {
+  font-size: 36px;
+  color: white;
+}
+.filmCast {
+  margin-top: 10px;
+}
+.certificate {
+  width: 25px;
+  height: 25px;
+}
+.certificate span {
+  border: 1px solid white;
+  border-radius: 60%;
+  padding: 4px;
+  font-size: 12px;
+}
+.heartIcon img {
+  width: 18px;
+  height: 16px;
+}
+.heart-rating span {
+  color: white;
+}
+.one p {
+  font-size: 10px;
+  color: white;
+  text-align: center;
+}
+.time {
+  margin-left: 20px;
+  font-size: 12px;
+  color: white;
+}
+.clockIcon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.movieLength {
+  padding-top: 3px;
+}
+.releaseDate {
+  padding-top: 3px;
+}
+.divTitle {
+  margin-bottom: 5px;
+}
+.dirImage img {
+  border-radius: 50px;
+  height: 40px;
+  width: 40px;
+  margin-right: 20px;
+}
+.castAndCrew {
+  margin-left: 20px;
+}

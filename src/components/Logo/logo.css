@@ -1,0 +1,19 @@
+.logo {
+  width: 75%;
+  display: flex;
+  justify-content: flex-start;
+  color: white;
+}
+.logo .logo-ins {
+  display: flex;
+  align-items: center;
+}
+.logo .logo-ins svg {
+  margin-right: 20px;
+}
+.logo .logo-ins input {
+  max-width: 546px;
+  height: 36px;
+  border-style: none;
+  border-radius: 3px;
+}

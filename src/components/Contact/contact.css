@@ -1,0 +1,55 @@
+.con-full {
+  background-color: rgb(49, 48, 53);
+}
+.contact {
+  height: 83px;
+  display: flex;
+  color: rgb(255, 255, 255);
+  font-size: 16px;
+}
+.con-text {
+  flex: 0 0 auto;
+  margin: 0px 16px 0px 4px;
+  font-weight: 600;
+}
+.con-con {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.con-con-button {
+  flex: 0 0 auto;
+  background-color: rgb(236, 94, 113);
+  border-radius: 3px;
+  padding: 10px 20px;
+  cursor: pointer;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+.customer-serv {
+  height: 122px;
+  background-color: #404043;
+}
+.customer-serv .cust-img {
+  margin: 0 auto;
+  padding: 15px;
+  justify-content: space-around;
+}
+.customer-serv .cust-img .cust-img-1 {
+  cursor: pointer;
+}
+.customer-serv .cust-img .cust-img-1 .cust-img-img {
+  width: 100%;
+  text-align: center;
+}
+.customer-serv .cust-img .cust-img-1 .cust-img-img svg {
+  height: 50px;
+  width: 50px;
+  fill: rgb(198, 198, 199);
+}
+.customer-serv .cust-img .cust-img-1 .cust-img-con {
+  margin: 10px 0 0;
+  color: #bcc0c4bd;
+  font-size: 11px;
+}

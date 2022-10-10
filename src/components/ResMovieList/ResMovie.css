@@ -1,0 +1,21 @@
+/* responsive div */
+.res-items {
+  display: none;
+  margin-bottom: 2px;
+}
+.res-gif img {
+  width: 375px;
+  height: 125px;
+  /* background-color: #f5f5f5; */
+  margin-top: 0px;
+}
+.res-mem {
+  display: none;
+  margin-bottom: 0px;
+}
+.res-mem img {
+  /* background-color: #f5f5f5; */
+  width: 375px;
+  height: 235px;
+  padding: 32px 16px;
+}

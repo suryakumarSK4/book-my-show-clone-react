@@ -1,0 +1,188 @@
+.backGround {
+  height: 480px;
+  max-width: 1536px;
+  /* height: 100%;
+  width: 100%; */
+  /* background-color: black; */
+  /* background-repeat: no-repeat;
+  background-position: center center;
+  background-image: linear-gradient(
+    90deg,
+    rgb(26, 26, 26) 24.97%,
+    rgb(26, 26, 26) 38.3%,
+    rgba(26, 26, 26, 0.04) 97.47%,
+    rgb(26, 26, 26) 100%
+  ); */
+  margin: 0px auto;
+  background-color: black;
+}
+.bgMovieImg {
+  height: 480px;
+  max-width: 1536px;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+.bgImg {
+  position: absolute;
+  margin: 0px auto;
+  height: 480px;
+  width: 1440px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* max-height: 480px;
+  max-width: 1440px; */
+  /* width: 92%; */
+}
+.Mname {
+  font-size: 36px;
+}
+.mvImg {
+  height: inherit;
+  max-width: 1240px;
+  max-height: 480px;
+  margin: 0px auto;
+  width: 100%;
+  position: relative;
+}
+.mvImg img {
+  position: relative;
+  width: 261px;
+  height: 392px;
+  background-color: black;
+  border-radius: 10px;
+}
+.movieDetailOne {
+  margin: auto 0px;
+}
+.movieDetailTwo {
+  color: white;
+  max-width: 520px;
+  padding-left: 32px;
+}
+.rating {
+  margin-top: 24px;
+}
+.percentage {
+  padding: 2px 0px 0px 6px;
+}
+.heart img {
+  height: 32px;
+  width: 32px;
+}
+.ratings {
+  font-size: 16px;
+  font-weight: 400;
+  padding: 4px 0 0 8px;
+}
+.addReview {
+  padding: 12px 24px;
+  margin: 16px 0px 0px;
+  max-width: 446px;
+  background-color: rgb(51, 51, 51);
+  border-radius: 8px;
+}
+.addRating h1 {
+  font-size: 18px;
+  line-height: 24px;
+}
+.addRating h2 {
+  line-height: 24px;
+  padding-top: 2px;
+  color: rgb(204, 204, 204);
+  font-size: 16px;
+  font-weight: 400;
+}
+.rateBtn {
+  margin-left: 4px;
+  margin: auto 0px;
+}
+.rateBtn button {
+  font-size: 18px;
+  line-height: 24px;
+  font-weight: 700;
+  border-radius: 8px;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  color: black;
+  border-style: none;
+}
+.movieDetails {
+  margin-top: 16px;
+}
+.visual {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: rgb(229, 229, 229);
+  color: rgb(0, 0, 0);
+  padding: 2px 8px;
+  border-radius: 2px;
+  align-self: flex-start;
+  margin-top: 8px;
+}
+.timing {
+  line-height: 24px;
+  margin-top: 16px;
+}
+.bookTickets {
+  margin-top: 32px;
+  max-width: 216px;
+}
+.bookTickets button {
+  width: 100%;
+  letter-spacing: 0.2px;
+  padding: 12px 8px;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 24px;
+}
+.shareButton {
+  position: absolute;
+  top: 33px;
+  right: 0;
+}
+.buttonContents {
+  display: flex;
+  height: 48px;
+  width: 122px;
+  background-color: rgba(34, 34, 34, 0.8);
+  opacity: 0.8;
+  padding: 0px 16px;
+  cursor: pointer;
+  border-radius: 4px;
+  color: white;
+}
+.shareIcon span {
+  font-size: 32px;
+}
+
+.aboutTheMovie {
+  max-width: 1240px;
+  /* display: flex; */
+  align-items: center;
+  margin: 0px auto;
+  width: 92%;
+}
+
+.components {
+  max-width: 926px;
+  width: 100%;
+}
+.componentTitle {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 30px;
+  color: rgb(0, 0, 0);
+}
+.componentContent {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0.2px;
+  color: rgb(51, 51, 51);
+  margin-top: 16px;
+}
+.componentSpace {
+  padding: 32px 0px;
+  border-top: 1px solid rgb(229, 229, 229);
+}

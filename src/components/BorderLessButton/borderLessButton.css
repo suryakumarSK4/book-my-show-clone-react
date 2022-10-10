@@ -1,0 +1,24 @@
+.mobile-input {
+  height: 100%;
+  margin: auto 0;
+  /* padding: 10px 10px 0px; */
+  margin-left: 5px;
+  width: 100%;
+  border-bottom: 1px solid rgb(204, 204, 204);
+}
+.m-num::placeholder {
+  font-size: 14px;
+  color: #666666;
+}
+.mobile-input input {
+  border: none;
+  width: inherit;
+  padding: 4px 0px 8px;
+  outline: none;
+}
+input.m-num {
+  width: 100%;
+}
+.input-wrap {
+  width: 100%;
+}
