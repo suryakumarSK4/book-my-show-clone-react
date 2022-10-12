@@ -20,3 +20,6 @@
   width: 18px;
   height: 18px;
 }
+.border-none {
+  border: none;
+}

@@ -1,0 +1,85 @@
+.nearTheatres {
+  background-color: #f2f2f2;
+  height: 500px;
+}
+.rows {
+  width: 100%;
+}
+.row-one {
+  border-bottom: 1px solid #f2f2f2;
+}
+.firstTheatre {
+}
+.availability {
+  margin-top: 15px;
+  background-color: white;
+  align-items: center;
+  padding: 10px 16px;
+  cursor: default;
+}
+.green {
+  background-color: #4abd5d;
+}
+.red {
+  background-color: #ff6600;
+}
+.gold {
+  background-color: #ffc610;
+}
+.round-div {
+  height: 8px;
+  width: 8px;
+  display: inline-block;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.empty-div {
+}
+.lan {
+  border: 1px solid #4abd5d;
+  color: #4abd5d;
+}
+.row-two {
+  background-color: white;
+  padding: 13px 16px;
+}
+.t-one {
+  font-size: 20px;
+  color: #999;
+  padding-right: 10px;
+}
+.theatreName {
+  font-size: 12px;
+  width: 220px;
+  font-weight: 700;
+  color: #333;
+}
+.info img {
+  width: 16px;
+  height: 16px;
+  margin-left: 6px;
+  margin-right: 4px;
+}
+.info {
+  color: #7d7d7d;
+  font-size: 10px;
+}
+.info-con {
+  padding-top: 3px;
+}
+.showOne p {
+  border: 1px solid #7d7d7d;
+  border-radius: 4px;
+  padding: 20px;
+  height: 40px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  color: #4abd5d;
+}
+.sTime div {
+  margin-right: 20px;
+}
+.cancel {
+  margin-top: 20px;
+}

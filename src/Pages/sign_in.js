@@ -1,5 +1,5 @@
 import React from "react";
-import "../sign-in/sign_in.css";
+import "../Assets/Styles/sign_in.css";
 import ImgButton from "../components/ImageButton/imgButton";
 import Button from "../components/Button/button";
 import TandC from "../components/TandC/tAndC";

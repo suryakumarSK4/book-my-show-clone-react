@@ -1,5 +1,5 @@
 import React from "react";
-import ALinks from "../components/ALinks/alinks";
+import ALinks from "../ALinks/alinks";
 import "./navBottom.css";
 
 function navBottom() {

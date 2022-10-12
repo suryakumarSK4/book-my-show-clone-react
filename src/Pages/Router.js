@@ -7,9 +7,8 @@ import Sign_in from "./sign_in";
 import Movie from "./Movie";
 import NotFound from "./NotFound";
 import ListOfTheatres from "./ListOfTheatres";
+import TheatreLayout from "./TheatreLayout";
 function Router() {
-  const a = new Date();
-  let date = `${a.getFullYear}${a.getMonth}${a.getDate} `;
   return (
     <>
       <Routes>
@@ -19,6 +18,7 @@ function Router() {
         <Route path="/signin" element={<Sign_in />}></Route>
         <Route path="/movie/:id" element={<Movie />}></Route>
         <Route path={`/ListOfTheatres`} element={<ListOfTheatres />}></Route>
+        <Route path="/TheatreLayout" element={<TheatreLayout />}></Route>
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>

@@ -1,0 +1,74 @@
+.dates {
+  height: 64px;
+}
+.sideBar {
+  color: #999;
+}
+.full {
+  background-color: white;
+}
+.today {
+  padding: 10px;
+}
+.dateOne {
+  background-color: #f84464;
+  border-radius: 8px;
+  font-size: 10px;
+  color: white;
+  padding: 5px 13px;
+  text-align: center;
+}
+.date1 {
+  color: #666;
+  border-radius: 8px;
+  font-size: 10px;
+  padding: 5px 13px;
+}
+.direction {
+  width: 270px;
+  display: flex;
+  overflow: hidden;
+  overflow-x: visible;
+}
+.direction div {
+  font-weight: 500;
+}
+.date {
+  font-size: 16px;
+  color: black;
+  text-align: center;
+}
+.lang {
+  font-size: 14px;
+  margin: 20px;
+  font-weight: 500;
+}
+.priceRange {
+  font-size: 12px;
+  align-items: center;
+  margin: 20px;
+}
+.showTiming {
+  font-size: 12px;
+  margin: 20px;
+  align-items: center;
+}
+.borderColor {
+  border-bottom: 3px solid #f84464;
+}
+.sideBorder {
+  border-left: 0.2px solid #666;
+  /* border-right: 0.2px solid #666; */
+  /* opacity: 0.2; */
+}
+.searchSVG {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
+}
+.searchSVG svg {
+  width: 16px;
+  height: 16px;
+  /* align-items: center; */
+}

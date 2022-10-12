@@ -1,6 +1,6 @@
 import React from "react";
-import NavBar from "../nav-bar/navBar";
-import NavBottom from "../navBar-bottom/navBottom";
+import NavBar from "../components/nav-bar/navBar";
+import NavBottom from "../components/navBar-bottom/navBottom";
 import { Link, useParams } from "react-router-dom";
 import Heart from "../Assets/images/heart.svg";
 import Button from "../components/Button/button";

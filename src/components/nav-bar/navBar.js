@@ -1,11 +1,11 @@
 import React from "react";
 import "../nav-bar/nav.css";
-import Button from "../components/Button/button";
-import InputDiv from "../components/InputDiv/inputDiv";
-import List from "../components/ListSVG/listSVG";
-import Logo from "../components/Logo/logo";
-import Popup from "../components/Popup/popup";
-import Sign_in from "../Pages/sign_in";
+import Button from "../Button/button";
+import InputDiv from "../InputDiv/inputDiv";
+import List from "../ListSVG/listSVG";
+import Logo from "../Logo/logo";
+import Popup from "../Popup/popup";
+import Sign_in from "../../Pages/sign_in";
 import { Link } from "react-router-dom";
 
 function navBar() {
