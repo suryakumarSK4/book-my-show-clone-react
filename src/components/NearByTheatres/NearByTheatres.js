@@ -6,8 +6,8 @@ import { showTime } from "../TheatreShowDetails/TheatreShowDetails";
 function NearByTheatres() {
   return (
     <div className="nearTheatres">
-      <div className="container rows">
-        <div className="rows">
+      <div className="container t-rows">
+        <div className="t-rows">
           <div className="row-one availability d-flex justify-between w-100">
             <div className="empty-div"></div>
             <div className=" firstTheatre">

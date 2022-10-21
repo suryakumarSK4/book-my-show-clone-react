@@ -89,7 +89,7 @@ function Movie({ image, name }) {
                   </div>
                 </div>
                 <div className="movieDetails">
-                  <div className="theatre d-flex">
+                  <div className=" d-flex">
                     <div className="visual d-flex">2D, IMAX</div>
                     <div className="visual d-flex ml-10">
                       Tamil, Hindi, Kannada, Malayalam, Telugu

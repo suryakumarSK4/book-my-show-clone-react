@@ -1,3 +1,52 @@
 .layoutDesign {
   padding: 50px 30px;
 }
+.seat-container {
+  width: 1300px;
+  margin: 0px auto;
+}
+.seatNum {
+  margin: 4px;
+}
+.active {
+  border: 1px solid #1ea83c;
+  color: #1ea83c;
+}
+.activeClicked {
+  background-color: #1ea83c;
+  color: white;
+}
+.active:hover {
+  background-color: #1ea83c;
+  color: white;
+}
+.blocked {
+  background-color: #eee;
+  color: white;
+}
+.close {
+  background-color: white;
+}
+.rows {
+  color: #b3b3b3;
+  margin-top: 10px;
+  margin-right: 100px;
+  width: 50px;
+}
+.td {
+  line-height: 25px;
+  width: 25px;
+  height: 25px;
+  text-align: center;
+
+  font-size: 10px;
+  border-radius: 2px;
+}
+.selectedSeats {
+  margin-bottom: 50px;
+  /* position: fixed; */
+}
+.selectedSeats button {
+  padding: 20px;
+  font-size: 20px;
+}

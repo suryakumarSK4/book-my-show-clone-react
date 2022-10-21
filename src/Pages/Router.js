@@ -8,6 +8,8 @@ import Movie from "./Movie";
 import NotFound from "./NotFound";
 import ListOfTheatres from "./ListOfTheatres";
 import TheatreLayout from "./TheatreLayout";
+import BookShow from "./BookShow";
+import Payment from "./Payment";
 function Router() {
   return (
     <>
@@ -19,6 +21,9 @@ function Router() {
         <Route path="/movie/:id" element={<Movie />}></Route>
         <Route path={`/ListOfTheatres`} element={<ListOfTheatres />}></Route>
         <Route path="/TheatreLayout" element={<TheatreLayout />}></Route>
+        <Route path="/BookTickets" element={<BookShow />}></Route>
+        <Route path="/Payment" element={<Payment />}></Route>
+
         <Route path="*" element={<NotFound />}></Route>
       </Routes>
     </>

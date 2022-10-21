@@ -1,0 +1,135 @@
+.container-top {
+  max-width: 1240px;
+  display: flex;
+  margin: 0px auto;
+  width: 92%;
+  margin-top: 15px;
+  height: 635px;
+}
+
+.summary {
+  /* background-color: #f2f2f2;
+  border: 1px solid #dfe3e7; */
+}
+.summaryImg {
+  background-color: white;
+  padding: 8px 8px 20px 8px;
+  height: 250px;
+}
+.summaryImg img {
+  width: 840px;
+  height: 210px;
+}
+.content-summary {
+  margin-left: 15px;
+}
+.booking-summary {
+  position: relative;
+  width: 370px;
+  padding: 30px 25px;
+  background: #fff;
+}
+.booksumvalue {
+  position: relative;
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 3px;
+  margin-bottom: 25px;
+  text-align: left;
+  color: #c02c39;
+}
+.ticket-counter {
+  width: 100%;
+  font-size: 14px;
+}
+.ticket-count {
+  font-size: 12px;
+}
+.theatre-name {
+  font-size: 12px;
+  margin-top: 4px;
+  color: #969696;
+  padding-left: 20px;
+}
+.drop {
+  font-size: 12px;
+}
+.drop-icon {
+  font-size: 16px;
+  fill: #969696;
+  cursor: pointer;
+}
+.pay-price {
+  font-size: 14px;
+}
+.sub-total {
+  font-size: 14px;
+  margin-top: 15px;
+  border-top: 1px dotted #666;
+}
+.book-smile {
+  background-color: #f5f5f5;
+  font-size: 10px;
+  padding: 16px;
+  margin: 20px 0 5px;
+}
+.smile {
+  font-size: 20px;
+  margin-right: 5px;
+}
+.a-smile {
+  align-items: flex-start;
+}
+.remove-rs {
+  font-weight: 700;
+  font-size: 12px;
+  line-height: 16px;
+  color: #dc3558;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.view-tc {
+  font-size: 10px;
+  line-height: 1.5;
+  margin-left: 31px;
+}
+.tc {
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 16px;
+  color: #666;
+  width: 50px;
+  margin-top: 8px;
+  border-bottom: 0.5px dashed #666;
+}
+.current-state {
+  font-size: 12px;
+  color: #666;
+  line-height: 21px;
+  margin-top: 10px;
+}
+.current-state span {
+  color: #dc3558;
+}
+.payable-amount {
+  background-color: #fffcdc;
+  padding: 15px 25px;
+  min-height: 50px;
+}
+.pro-icon {
+  font-size: 16px;
+}
+.proceed {
+  display: flex;
+  width: 100%;
+  margin: 15px 0 -15px 5px;
+  font-size: 12px;
+}
+.pro-btn button {
+  font-size: 16px;
+  font-weight: 700;
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 25px;
+  border-radius: 8px;
+}

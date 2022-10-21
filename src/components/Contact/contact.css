@@ -53,3 +53,9 @@
   color: #bcc0c4bd;
   font-size: 11px;
 }
+.customer-serv .cust-img .cust-img-1 svg:hover {
+  fill: white;
+}
+.cust-img-con span:hover {
+  color: white;
+}
