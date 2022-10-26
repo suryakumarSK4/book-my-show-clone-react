@@ -24,13 +24,15 @@ function Summary(props) {
             <div className="ticket-counter d-flex justify-between">
               <div className="counts">
                 <div className="seat-type">
-                  KING - {}
+                  KING - {props.seatNumbers}
                   {/* {console.log(seatNumbers + " " + count)} */}
-                  <span className="ticket-count">( {} Tickets )</span>
+                  <span className="ticket-count">
+                    ( {props.count} Tickets )
+                  </span>
                 </div>
                 <div className="theatre-name">ARASAN CINEMAS</div>
               </div>
-              <div className="pay-price">Rs. {}.00</div>
+              <div className="pay-price">Rs. {props.amount}.00</div>
             </div>
 
             <div className="convenience-fees d-flex justify-between mt-10">

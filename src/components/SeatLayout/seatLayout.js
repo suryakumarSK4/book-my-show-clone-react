@@ -3,7 +3,7 @@ import "./SeatLayout.css";
 import { left, right } from "./Total-seat.js";
 import Button from "../Button/button";
 import { Link } from "react-router-dom";
-import Summary from "../Summary/Summary";
+import BookShow from "../../Pages/BookShow";
 import BookingDetails from "../BookingDetails/BookingDetails";
 import axios from "axios";
 function SeatLayout() {
@@ -51,7 +51,7 @@ function SeatLayout() {
     //   select.addclassList("blocked");
     // });
 
-    <Summary amount={pay} seatNumbers={[...mySet]} count={mySet.size} />;
+    <BookShow amount={pay} seatNumbers={[...mySet]} count={mySet.size} />;
   }
 
   async function getData() {
