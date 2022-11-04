@@ -1,19 +1,14 @@
-import React from "react";
+import { React, createContext, useState, useMemo } from "react";
 import Summary from "../components/Summary/Summary";
 import BookingDetails from "../components/BookingDetails/BookingDetails";
 
-function bookShow(props) {
-  console.log(props);
+function BookShow() {
   return (
-    <div>
-      {/* <Summary
-        amount={props.amount}
-        count={props.count}
-        seatNumbers={props.seatNumbers}
-      /> */}
-      <BookingDetails />
-    </div>
+    <>
+      <Summary />
+      <seatContext />
+    </>
   );
 }
 
-export default bookShow;
+export default BookShow;

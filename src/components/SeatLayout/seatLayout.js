@@ -1,4 +1,5 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { seatContext } from "../../Pages/Router";
 import "./SeatLayout.css";
 import { left, right } from "./Total-seat.js";
 import Button from "../Button/button";
@@ -6,14 +7,9 @@ import { Link } from "react-router-dom";
 import BookShow from "../../Pages/BookShow";
 import BookingDetails from "../BookingDetails/BookingDetails";
 import axios from "axios";
+import Summary from "../Summary/Summary";
 function SeatLayout() {
-  // const seat = document.querySelector("seat");
-  // let clicked = seat.addEventListener("onclick", function click() {});
-  // function seat() {
-  //   $(".cinema-seats .seat").on("click", function () {
-  //     $(this).toggleClass("active");
-  //   });
-  // }
+  let { username, setUsername } = useContext(seatContext);
   const [state, setState] = useState([]);
 
   let [pay, setPay] = useState(0);
@@ -22,46 +18,57 @@ function SeatLayout() {
   useEffect(() => {
     getData();
   }, []);
-  var value;
+
+  var value = 0;
   let oldPrice = 0;
 
   function addAmount(value) {
-    // value = mySet.size * 100;
-    // console.log(value);
-    // setPay(() => mySet.size * 100);
-    // console.log(pay);
     oldPrice += value.price;
-    // setPay(oldPrice);
     console.log(oldPrice);
   }
-  function active(row, col) {
-    // console.log(row + " " + col);
-    clicked_array.push(row + col);
-    newSet(mySet.add(row + col));
+  function active(row) {
+    newSet(mySet.add(row));
+    // console.log(pay + " " + [...mySet].join(" ") + " " + mySet.size);
 
-    // let value = clicked_array.length * 100;
-    // setPay(`Pay Rs.${value}.00`);
-    console.log(pay + " " + [...mySet] + " " + mySet.size);
+    setUsername([...mySet]);
   }
   function sendData() {
-    // console.log(clicked_array);
-    // clicked_array.map((ele) => {
-    //   console.log(ele);
-    //   let select = document.querySelector(ele);
-    //   select.addclassList("blocked");
-    // });
-
-    <BookShow amount={pay} seatNumbers={[...mySet]} count={mySet.size} />;
+    let str = [...mySet].join(" ");
+    fetch("http://192.168.1.23:3000/api/v1/book/bookMovieTickets", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: 1,
+        movie_name: "Ponniyin Selvan Part-1",
+        theater_name: "Kamala Cinemas",
+        location: "Chennai",
+        time_slot: "16:00:00",
+        number_of_tickets: mySet.size,
+        seats: str,
+        date: "2022-10-14",
+        screen_no: 1,
+      }),
+    }).then((res) => {
+      // checking status
+      if (res.ok) {
+        console.log("success");
+      } else {
+        console.log("not success");
+      }
+      // checking status
+    });
   }
 
   async function getData() {
     try {
       const data = await axios.get(
-        "http://192.168.1.52:3000/api/v1/getData/getSeats?theater_id=1&screen_no=1&timing_id=1"
+        "http://192.168.1.23:3000/api/v1/getData/getSeats?theater_id=1&screen_no=1&timing_id=1"
       );
 
       if (data) {
-        setState(data.data);
+        setState(data.data, data.data.price);
       }
 
       // console.log("hiii", allData);
@@ -70,13 +77,15 @@ function SeatLayout() {
     }
   }
   let showRow = "";
-  function countRow(index) {
-    let countRow =
-      index < 26
-        ? String.fromCharCode(index + 65)
-        : String.fromCharCode(index + 65 - 26);
-
-    return countRow;
+  let checkVal = 0;
+  function countRow(index, len) {
+    // console.log(len.length);
+    if (len.length > 0) {
+      let countRow = String.fromCharCode(index - checkVal + 65);
+      return countRow;
+    } else {
+      checkVal++;
+    }
   }
 
   return (
@@ -85,33 +94,23 @@ function SeatLayout() {
         <div className="seats d-flex">
           <table>
             {state.map((row, index) => {
-              // console.log(row);
               return (
                 <tr className={`row-${index} d-flex`}>
-                  {/* {(i = index > 25 ? index - 25 : index)} */}
-
                   <td className="rows">
-                    {(showRow = countRow(index))}
-                    {index > 25 ? ` ${showRow}` : ""}
+                    {(showRow = countRow(index, row))}
+                    {/* {index > 25 ? ` ${showRow}` : ""} */}
                   </td>
                   {row.map((col, ind) => {
-                    // console.log(col.id);
                     if (!col.isBooked) {
                       return (
                         <div className="seatNum">
                           <td
                             key={col.id}
-                            className={"td active"}
+                            className={"td active activated"}
                             onClick={(e) => {
                               e.target.classList.toggle(`activeClicked`);
-                              active(
-                                index < 26
-                                  ? String.fromCharCode(index + 65)
-                                  : countRow(index) +
-                                      String.fromCharCode(index - 26 + 65),
-                                ind + 1
-                              );
-                              // addAmount(col);
+                              e.target.classList.remove("active");
+                              active(col.seat_no);
                               setPay(pay + col.price);
                             }}
                           >
@@ -122,7 +121,7 @@ function SeatLayout() {
                     } else {
                       return (
                         <div className="seatNum">
-                          <td className="td blocked"></td>
+                          <td className="td blocked">{ind + 1}</td>
                         </div>
                       );
                     }
@@ -134,11 +133,11 @@ function SeatLayout() {
         </div>
       </div>
       {/* <div className="seat-container layoutDesign">
-        <div class="theatre">
-          <div class="cinema-seats left">
+        <div className="theatre">
+          <div className="cinema-seats left">
             {left.map((val, index) => {
               return (
-                <div class={`cinema-row row-${index}`}>
+                <div className={`cinema-row row-${index}`}>
                   {left.map(() => {
                     return <div className="seat"></div>;
                   })}
@@ -147,10 +146,10 @@ function SeatLayout() {
             })}
           </div>
 
-          <div class="cinema-seats right">
+          <div className="cinema-seats right">
             {left.map((val, index) => {
               return (
-                <div class={`cinema-row row-${index}`}>
+                <div className={`cinema-row row-${index}`}>
                   {left.map(() => {
                     return <div className="seat"></div>;
                   })}
@@ -161,54 +160,56 @@ function SeatLayout() {
         </div>
 
         <div className="seats d-flex">
-      {      <table>
-        {left.map((row, index) => {
-          return (
-            <tr className={`row-${index} d-flex`}>
-              <td className="rows">{String.fromCharCode(row + 64)}</td>
-              {left.map((col, ind) => {
-                console.log(left.length);
-                if (
-                  index == Math.floor(left.length / 2) ||
-                  index == Math.floor(left.length / 2) + 1 ||
-                  ind == Math.floor(left.length - 1)
-                ) {
-                  return (
-                    <div className="seatNum">
-                      <td className="td close"></td>
-                    </div>
-                  );
-                } else if (row == 5) {
-                  return (
-                    <div className="seatNum">
-                      <td className="td blocked">{col}</td>
-                    </div>
-                  );
-                } else {
-                  return (
-                    <div className="seatNum">
-                      <td
-                        className={`td active ${
-                          String.fromCharCode(row + 64) + (row + ind)
-                        }`}
-                        onClick={(e) => {
-                          e.target.classList.toggle(`activeClicked`);
-                          active(String.fromCharCode(row + 64), row + ind);
-                        }}
-                      >
-                        {col}
-                      </td>
-                    </div>
-                  );
-                }
+          {
+            <table>
+              {left.map((row, index) => {
+                return (
+                  <tr className={`row-${index} d-flex`}>
+                    <td className="rows">{String.fromCharCode(row + 64)}</td>
+                    {left.map((col, ind) => {
+                      // console.log(left.length);
+                      if (
+                        index == Math.floor(left.length / 2) ||
+                        index == Math.floor(left.length / 2) + 1 ||
+                        ind == Math.floor(left.length - 1)
+                      ) {
+                        return (
+                          <div className="seatNum">
+                            <td className="td close"></td>
+                          </div>
+                        );
+                      } else if (row == 5) {
+                        return (
+                          <div className="seatNum">
+                            <td className="td blocked">{col}</td>
+                          </div>
+                        );
+                      } else {
+                        return (
+                          <div className="seatNum">
+                            <td
+                              className={`td active ${
+                                String.fromCharCode(row + 64) + (row + ind)
+                              }`}
+                              onClick={(e) => {
+                                e.target.classList.toggle(`activeClicked`);
+                                active(
+                                  String.fromCharCode(row + 64),
+                                  row + ind
+                                );
+                              }}
+                            >
+                              {col}
+                            </td>
+                          </div>
+                        );
+                      }
+                    })}
+                  </tr>
+                );
               })}
-            </tr>
-          );
-        })}
-      </table>} */}
-
-      {/* {}
-          {console.log(allData)}
+            </table>
+          }
         </div>
       </div> */}
       <div className="selectedSeats d-flex align-center justify-center">

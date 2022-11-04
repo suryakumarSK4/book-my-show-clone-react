@@ -12,12 +12,16 @@
   border: 1px solid #1ea83c;
   color: #1ea83c;
 }
+.activated {
+  border: 1px solid #1ea83c;
+  color: #1ea83c;
+}
 .activeClicked {
   background-color: #1ea83c;
   color: white;
 }
 .active:hover {
-  background-color: #1ea83c;
+  background-color: #b0f6bf;
   color: white;
 }
 .blocked {
@@ -36,7 +40,7 @@
 .td {
   line-height: 25px;
   width: 25px;
-  height: 25px;
+  height: 23px;
   text-align: center;
 
   font-size: 10px;

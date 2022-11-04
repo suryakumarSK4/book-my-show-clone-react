@@ -1,12 +1,54 @@
-import React from "react";
+import { React, useContext } from "react";
 import "./Summary.css";
 import NavBar from "../nav-bar/navBar";
 import NavBottom from "../navBar-bottom/navBottom";
 import Button from "../Button/button";
 import { Link } from "react-router-dom";
-function Summary(props) {
+import { seatContext } from "../../Pages/Router";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+function Summary() {
+  let navigate = useNavigate();
+
   // console.log(amount + " " + count + " " + " " + seatNumbers);
-  console.log(props);
+  let { username } = useContext(seatContext);
+
+  console.log("post", username.join(" "));
+
+  async function payment() {
+    try {
+      // let res = await fetch("http://192.168.29.127:3000/api/v1/book/payment", {
+      //   method: "POST",
+      //   headers: {
+      //     "Content-Type": "application/json",
+      //   },
+      //   body: JSON.stringify({
+      //     user_id: 1,
+      //     theater_name: "Kamala Cinemas",
+      //     movie_name: "Ponniyin Selvan Part-1",
+      //     time: "16:00:00",
+      //     date: "2022-10-14",
+      //   }),
+      // });
+      let res = await axios.post(
+        "http://192.168.29.127:3000/api/v1/book/payment",
+        {
+          user_id: 1,
+          theater_name: "Kamala Cinemas",
+          movie_name: "Ponniyin Selvan Part-1",
+          time: "16:00:00",
+          date: "2022-10-14",
+          seats: username.join(" "),
+          email: "nave2022@gmail.com",
+        }
+      );
+      console.log(`${res.data.redirect_url}`);
+
+      window.location.replace(res.data.redirect_url);
+    } catch (error) {
+      console.log(error.message);
+    }
+  }
   return (
     <div className="summary">
       <NavBar />
@@ -24,15 +66,15 @@ function Summary(props) {
             <div className="ticket-counter d-flex justify-between">
               <div className="counts">
                 <div className="seat-type">
-                  KING - {props.seatNumbers}
-                  {/* {console.log(seatNumbers + " " + count)} */}
+                  KING - {username.join(",")}
+                  <br></br>
                   <span className="ticket-count">
-                    ( {props.count} Tickets )
+                    ( {username.length} Tickets )
                   </span>
                 </div>
                 <div className="theatre-name">ARASAN CINEMAS</div>
               </div>
-              <div className="pay-price">Rs. {props.amount}.00</div>
+              <div className="pay-price">Rs. {username.length * 110}.00</div>
             </div>
 
             <div className="convenience-fees d-flex justify-between mt-10">
@@ -42,13 +84,17 @@ function Summary(props) {
                 </span>
                 convenience-fees
               </div>
-              <div className="pay-price">RS. 44.00</div>
+              <div className="pay-price">
+                RS. {`${username.length * 11}`}.00
+              </div>
             </div>
 
             <div className="sub-total d-flex justify-between">
               <p style={{ marginTop: "15px" }}>Sub total</p>
 
-              <p style={{ marginTop: "15px" }}>Rs. 544.04</p>
+              <p style={{ marginTop: "15px" }}>
+                Rs. {`${username.length * 110 + username.length * 11}`}.00
+              </p>
             </div>
 
             <div className="book-smile mt-10">
@@ -60,7 +106,7 @@ function Summary(props) {
                   <span className="f-medium">Contribution to BookASmile</span>
                 </div>
                 <div className="pay-price">
-                  <div className="paise">RS. 2</div>
+                  <div className="paise">RS. {`${username.length}`}</div>
                   <div className="remove-rs">Remove</div>
                 </div>
               </div>
@@ -77,7 +123,13 @@ function Summary(props) {
 
           <div className="payable-amount d-flex justify-between">
             <div>Amount Payable</div>
-            <div>Rs. 544.04</div>
+            <div>
+              Rs.{" "}
+              {`${
+                username.length * 110 + username.length * 11 + username.length
+              }`}
+              .00
+            </div>
           </div>
 
           <div className="proceed">
@@ -92,15 +144,13 @@ function Summary(props) {
             </div>
           </div>
           <div className="pro-btn">
-            <Link to="/Payment">
-              <a href="http://192.168.1.52:3000/api/v1/book/payment">
-                <Button
-                  value={"Proceed"}
-                  callback={""}
-                  classname={"red-button"}
-                />
-              </a>
-            </Link>
+            <a href="http://192.168.1.52:3000/api/v1/book/payment">
+              <Button
+                value={"Proceed"}
+                callback={payment}
+                classname={"red-button"}
+              />
+            </a>
           </div>
         </div>
       </div>
