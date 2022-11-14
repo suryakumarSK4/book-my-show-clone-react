@@ -23,15 +23,15 @@ function Entertainment() {
           Step out or stay in, interesting experiences for everyone.
         </div>
         <div className=" entr-con ">
-          <div className="entertainment-div res-div container">
+          <div className="entertainment-div container">
             <div className="img-row-one d-grid ">
               <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
               <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
               {shows.map((show) => {
                 return (
                   <>
-                    <div className="img-one">
-                      <Img address={show} classname={""} alt={""} />
+                    <div className="gap">
+                      <Img address={show} classname={"img-size"} alt={""} />
                     </div>
                   </>
                 );

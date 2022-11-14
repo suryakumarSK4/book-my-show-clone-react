@@ -39,7 +39,7 @@ function MovieList() {
                   >
                     <div className="movie-img" key={index}>
                       <Img
-                        classname={"img-size"}
+                        classname={"img-size gap"}
                         alt={""}
                         address={image}
                         key={index}

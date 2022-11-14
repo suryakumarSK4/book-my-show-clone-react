@@ -16,6 +16,8 @@
   color: white;
   padding: 16px 0 0 0;
   background-color: #2b3148;
+  width: 92%;
+  margin: auto;
 }
 
 .pre-show .shows {
@@ -31,12 +33,11 @@
   grid-gap: 1rem;
   overflow: hidden;
   overflow-x: visible;
-  gap: 8px 32px;
   margin: 8px 0px 8px 0px;
 }
 .shows img {
-  height: 334px;
-  width: 222px;
+  max-height: 334px;
+  max-width: 222px;
   border-radius: 10px;
   margin: 10px 10px 0 0;
 }

@@ -52,36 +52,38 @@ function Premiere() {
           />
         </div>
 
-        <div className="content ">
+        <div className="content container">
           <div>
-            <Content classname={"f-24 fw-700 white"} value={"Premieres"} />
+            <Content classname={"f-rem fw-700 white"} value={"Premieres"} />
           </div>
+        </div>
+        <div className="container">
           <div>
             <Content
               classname={"f-medium white"}
               value={"Brand new releases every Friday"}
             />
           </div>
-          <div className="pre-show container res-div">
-            <div className="shows ">
-              <div className="show-one  ">
-                <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
-                <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
-                {shows.map((show, index) => {
-                  return (
-                    <div>
-                      <Img classname={""} address={show} alt={""} />
+        </div>
+        <div className="pre-show">
+          <div className="shows ">
+            <div className="show-one ">
+              <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
+              <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
+              {shows.map((show, index) => {
+                return (
+                  <div className=" gap">
+                    <Img classname={"img-size gap"} address={show} alt={""} />
 
-                      <div className="show-details">
-                        <div className="s-name">{show_names[index]}</div>
-                        <div className="s-lang">{show_lang[index]}</div>
-                      </div>
+                    <div className="show-details">
+                      <div className="s-name">{show_names[index]}</div>
+                      <div className="s-lang">{show_lang[index]}</div>
                     </div>
-                  );
-                })}
+                  </div>
+                );
+              })}
 
-                {/* <!-- slide icon --> */}
-              </div>
+              {/* <!-- slide icon --> */}
             </div>
           </div>
         </div>

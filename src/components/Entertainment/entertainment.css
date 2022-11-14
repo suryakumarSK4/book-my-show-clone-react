@@ -15,7 +15,7 @@
   grid-gap: 1rem;
   overflow: hidden;
   overflow-x: visible;
-  gap: 8px 32px;
+  /* gap: 8px 32px; */
   margin: 8px 0px 8px 0px;
   margin-top: 5px;
   min-width: inherit;
@@ -28,6 +28,4 @@
   border-radius: 10px;
   max-width: 222px;
   max-height: 222px;
-  height: 150px;
-  width: 150px;
 }

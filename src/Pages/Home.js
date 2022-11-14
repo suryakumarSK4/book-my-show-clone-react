@@ -10,6 +10,7 @@ import Premiere from "../components/Premiere/Premiere";
 import Events from "../components/EventsNearYou/Events";
 import Footer from "../components/Footer/Footer";
 import Contact from "../components/Contact/Contact";
+import ResItem from "../components/Res-Items/ResItem";
 function Home() {
   return (
     <div>
@@ -23,6 +24,7 @@ function Home() {
         <Stream />
         <Entertainment />
         <Premiere />
+        <ResItem />
         <Events />
         <Contact />
         <Footer />

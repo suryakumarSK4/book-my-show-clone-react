@@ -21,7 +21,7 @@ function Events() {
     "3.77 kms away",
   ];
   return (
-    <div className="events">
+    <div className="events event-pad">
       <div className="eve-cont container">
         <h2>Events Happening Near You</h2>
       </div>
@@ -31,7 +31,7 @@ function Events() {
             return (
               <>
                 <div className="eve-img-one">
-                  <Img classname={""} alt={""} address={event} />
+                  <Img classname={"img-size gap"} alt={""} address={event} />
 
                   <div className="movie-details">
                     <div className="m-name">Alexperience</div>
