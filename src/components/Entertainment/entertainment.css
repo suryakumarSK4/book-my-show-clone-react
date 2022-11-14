@@ -4,7 +4,6 @@
 }
 .entertainment .cont {
   color: rgb(51, 51, 51);
-  font-size: 24px;
   font-weight: 700;
   line-height: 1.17;
 }
@@ -27,6 +26,8 @@
 }
 .img-one img {
   border-radius: 10px;
-  width: 222px;
-  height: 222px;
+  max-width: 222px;
+  max-height: 222px;
+  height: 150px;
+  width: 150px;
 }

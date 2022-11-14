@@ -1,6 +1,5 @@
 /* moving icon */
 .carousel {
-  display: flex;
   position: absolute;
   cursor: pointer;
   width: 40px;
@@ -17,6 +16,7 @@
   align-items: center;
 }
 .icon-border svg {
+  margin-top: 10px;
   width: 18px;
   height: 18px;
 }

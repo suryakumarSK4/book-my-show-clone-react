@@ -5,6 +5,7 @@
   width: 92%;
   margin-top: 15px;
   height: 635px;
+  flex-wrap: wrap;
 }
 
 .summary {
@@ -14,18 +15,20 @@
 .summaryImg {
   background-color: white;
   padding: 8px 8px 20px 8px;
-  height: 250px;
+  max-height: 250px;
 }
 .summaryImg img {
-  width: 840px;
-  height: 210px;
+  max-width: 840px;
+  max-height: 210px;
+  width: 100%;
+  height: auto;
 }
 .content-summary {
   margin-left: 15px;
 }
 .booking-summary {
   position: relative;
-  width: 370px;
+  max-width: 370px;
   padding: 30px 25px;
   background: #fff;
 }
@@ -121,6 +124,7 @@
 }
 .proceed {
   display: flex;
+  align-items: center;
   width: 100%;
   margin: 15px 0 -15px 5px;
   font-size: 12px;

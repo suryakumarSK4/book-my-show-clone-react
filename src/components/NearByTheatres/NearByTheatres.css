@@ -40,6 +40,7 @@
   color: #4abd5d;
 }
 .row-two {
+  flex-wrap: wrap;
   background-color: white;
   padding: 13px 16px;
 }
@@ -76,6 +77,9 @@
   display: flex;
   align-items: center;
   color: #4abd5d;
+}
+.sTime {
+  flex-wrap: wrap;
 }
 .sTime div {
   margin-right: 20px;

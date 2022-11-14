@@ -18,15 +18,15 @@ function Entertainment() {
   return (
     <>
       <div className="entertainment recommended">
-        <div className="container cont">The Best of Entertainment</div>
+        <div className="container cont f-rem">The Best of Entertainment</div>
         <div className="sub-con">
           Step out or stay in, interesting experiences for everyone.
         </div>
         <div className=" entr-con ">
-          <div className="entertainment-div container res-div">
-            <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
-            <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
+          <div className="entertainment-div res-div container">
             <div className="img-row-one d-grid ">
+              <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
+              <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
               {shows.map((show) => {
                 return (
                   <>

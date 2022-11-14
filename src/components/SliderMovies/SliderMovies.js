@@ -18,9 +18,14 @@ function SliderMovies() {
         <Carousel _Itsposition={"left"} borderRadius={"br-box"} />
         <div className="slide-img d-flex">
           {imgs.map((image, index) => {
-            return (
-              <Img classname={"pr-10"} alt={alts[index]} address={image} />
-            );
+            if (index == 0)
+              return (
+                <Img
+                  classname={"pl-10 res-img"}
+                  alt={alts[index]}
+                  address={image}
+                />
+              );
           })}
         </div>
       </div>

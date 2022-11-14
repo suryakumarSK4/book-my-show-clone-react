@@ -1,5 +1,5 @@
 .dates {
-  height: 64px;
+  flex-wrap: wrap;
 }
 .sideBar {
   color: #999;
