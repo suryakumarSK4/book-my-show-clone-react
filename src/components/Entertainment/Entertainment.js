@@ -25,12 +25,12 @@ function Entertainment() {
         <div className=" entr-con ">
           <div className="entertainment-div container">
             <div className="img-row-one d-grid ">
-              <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
-              <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
-              {shows.map((show) => {
+              {/* <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
+              <Carousel _Itsposition={"right"} borderRadius={"br-round"} /> */}
+              {shows.map((show, index) => {
                 return (
                   <>
-                    <div className="gap">
+                    <div className="gap" key={show}>
                       <Img address={show} classname={"img-size"} alt={""} />
                     </div>
                   </>

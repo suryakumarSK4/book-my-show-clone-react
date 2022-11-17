@@ -68,12 +68,17 @@ function Premiere() {
         <div className="pre-show">
           <div className="shows ">
             <div className="show-one ">
-              <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
-              <Carousel _Itsposition={"right"} borderRadius={"br-round"} />
+              {/* <Carousel _Itsposition={"left"} borderRadius={"br-round"} />
+              <Carousel _Itsposition={"right"} borderRadius={"br-round"} /> */}
               {shows.map((show, index) => {
                 return (
                   <div className=" gap">
-                    <Img classname={"img-size gap"} address={show} alt={""} />
+                    <Img
+                      classname={"img-size gap"}
+                      address={show}
+                      alt={""}
+                      key={index}
+                    />
 
                     <div className="show-details">
                       <div className="s-name">{show_names[index]}</div>

@@ -16,6 +16,7 @@
   color: white;
   padding: 16px 0 0 0;
   background-color: #2b3148;
+  max-width: 1240px;
   width: 92%;
   margin: auto;
 }
@@ -30,7 +31,7 @@
 .show-one {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   overflow: hidden;
   overflow-x: visible;
   margin: 8px 0px 8px 0px;

@@ -13,7 +13,7 @@
 .eve-img {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  grid-gap: 1.5rem;
   overflow: hidden;
   overflow-x: visible;
   /* gap: 8px 32px; */

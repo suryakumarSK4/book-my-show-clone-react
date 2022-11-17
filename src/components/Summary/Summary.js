@@ -7,14 +7,17 @@ import { Link } from "react-router-dom";
 import { seatContext } from "../../Pages/Router";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import { useEffect } from "react";
 function Summary() {
   let navigate = useNavigate();
 
   // console.log(amount + " " + count + " " + " " + seatNumbers);
   let { username } = useContext(seatContext);
-
-  console.log("post", username.join(" "));
-
+  console.log("post", username);
+  let amount = username[username.length - 1];
+  let tax = username[username.length - 1] * 0.2;
+  var payBill = +amount + tax + username.length - 1;
+  // console.log();
   async function payment() {
     try {
       // let res = await fetch("http://192.168.29.127:3000/api/v1/book/payment", {
@@ -31,14 +34,14 @@ function Summary() {
       //   }),
       // });
       let res = await axios.post(
-        "http://192.168.29.127:3000/api/v1/book/payment",
+        "http://192.168.1.109:3000/api/v1/book/payment",
         {
           user_id: 1,
           theater_name: "Kamala Cinemas",
           movie_name: "Ponniyin Selvan Part-1",
           time: "16:00:00",
           date: "2022-10-14",
-          seats: username.join(" "),
+          seats: username.slice(0, username.length - 1).join(" "),
           email: "nave2022@gmail.com",
         }
       );
@@ -66,15 +69,15 @@ function Summary() {
             <div className="ticket-counter d-flex justify-between">
               <div className="counts">
                 <div className="seat-type">
-                  KING - {username.join(",")}
+                  KING - {username.slice(0, username.length - 1).join(",")}
                   <br></br>
                   <span className="ticket-count">
-                    ( {username.length} Tickets )
+                    ( {username.length - 1} Tickets )
                   </span>
                 </div>
                 <div className="theatre-name">ARASAN CINEMAS</div>
               </div>
-              <div className="pay-price">Rs. {username.length * 110}.00</div>
+              <div className="pay-price">Rs. {amount}.00</div>
             </div>
 
             <div className="convenience-fees d-flex justify-between mt-10">
@@ -84,17 +87,13 @@ function Summary() {
                 </span>
                 convenience-fees
               </div>
-              <div className="pay-price">
-                RS. {`${username.length * 11}`}.00
-              </div>
+              <div className="pay-price">RS. {`${tax}`}.00</div>
             </div>
 
             <div className="sub-total d-flex justify-between">
               <p style={{ marginTop: "15px" }}>Sub total</p>
 
-              <p style={{ marginTop: "15px" }}>
-                Rs. {`${username.length * 110 + username.length * 11}`}.00
-              </p>
+              <p style={{ marginTop: "15px" }}>Rs. {`${+amount + tax}`}.00</p>
             </div>
 
             <div className="book-smile mt-10">
@@ -106,7 +105,7 @@ function Summary() {
                   <span className="f-medium">Contribution to BookASmile</span>
                 </div>
                 <div className="pay-price">
-                  <div className="paise">RS. {`${username.length}`}</div>
+                  <div className="paise">RS. {`${username.length - 1}`}</div>
                   <div className="remove-rs">Remove</div>
                 </div>
               </div>
@@ -124,10 +123,8 @@ function Summary() {
           <div className="payable-amount d-flex justify-between">
             <div>Amount Payable</div>
             <div>
-              Rs.{" "}
-              {`${
-                username.length * 110 + username.length * 11 + username.length
-              }`}
+              Rs.
+              {`${payBill}`}
               .00
             </div>
           </div>
@@ -144,13 +141,11 @@ function Summary() {
             </div>
           </div>
           <div className="pro-btn">
-            <a href="http://192.168.1.52:3000/api/v1/book/payment">
-              <Button
-                value={"Proceed"}
-                callback={payment}
-                classname={"red-button"}
-              />
-            </a>
+            <Button
+              value={"Proceed"}
+              callback={payment}
+              classname={"red-button"}
+            />
           </div>
         </div>
       </div>

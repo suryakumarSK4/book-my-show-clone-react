@@ -18,7 +18,7 @@
 }
 .input-div {
   display: flex;
-  width: 500px;
+  max-width: 500px;
   align-items: center;
 }
 .input-div p {

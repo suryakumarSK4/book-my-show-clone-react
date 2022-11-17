@@ -10,9 +10,9 @@
 /* list of movies */
 
 .movie-one {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
-  grid-gap: 1rem;
+  display: flex;
+  /* grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr 1fr; */
+  grid-gap: 1.5rem;
   overflow: hidden;
   overflow-x: visible;
   margin: 8px 0px 8px 0px;
@@ -43,21 +43,23 @@
   max-height: 378px;
   /* width: 100%;
   height: 100%; */
+  /* margin-right: 30px; */
   border-radius: 10px;
 }
 
 .movie-coll {
   width: 100%;
   display: flex;
-  overflow: hidden;
-  overflow-x: visible;
+  /* overflow: hidden;
+  overflow-x: visible; */
   scrollbar-width: none;
   margin: 16px 0;
   border-radius: 0px;
   position: relative;
 }
-/* .movie-img {
-} */
+.movie-img {
+  margin-right: 20px;
+}
 .movie-img :last-child div {
   margin-right: 0;
 }
@@ -81,3 +83,113 @@
   font-weight: normal;
 }
 /* movie list one */
+
+/* //? carousel  */
+
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.prev {
+  left: 0px;
+  display: none;
+}
+.nav .prev.show {
+  display: block;
+}
+.next {
+  right: 0px;
+}
+.nav .next.hide {
+  display: none;
+}
+.res-track {
+  display: flex;
+  overflow: hidden;
+  overflow-x: visible;
+}
+.track {
+  display: inline-flex;
+  height: 100%;
+  transition: transform 0.2s ease-in-out;
+}
+.carousel-container {
+  width: 92%;
+  margin: 0px auto;
+  position: relative;
+  max-width: 1240px;
+}
+
+/*  */
+
+/* @media (max-width: 768px) {
+  .carousel-container {
+    width: 95%;
+  }
+} */
+.inner-carousel {
+  width: 100%;
+  margin-top: 25px;
+
+  overflow: hidden;
+}
+.track {
+  display: inline-flex;
+  /* height: 100%; */
+  transition: transform 0.2s ease-in-out;
+}
+.card-container {
+  /* width: 275px;
+  height: 400px; */
+  flex-shrink: 0;
+  padding-right: 10px;
+}
+@media (max-width: 768px) {
+  .card-container {
+    width: 184px;
+  }
+}
+.card {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center bottom;
+  background-size: center;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+}
+
+.nav button {
+  position: absolute;
+  top: 50%;
+  transform: translatey(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  outline: none;
+  border: 1px solid #000;
+  cursor: pointer;
+}
+.nav .prev {
+  left: -30px;
+  display: none;
+}
+.show {
+  display: block;
+}
+.next {
+  right: -30px;
+}
+.next.hide {
+  display: none;
+}

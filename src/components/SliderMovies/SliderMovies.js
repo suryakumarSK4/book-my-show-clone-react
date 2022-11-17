@@ -14,13 +14,14 @@ function SliderMovies() {
   return (
     <div className="scrollSlide">
       <div className="slide res-div">
-        <Carousel _Itsposition={"right"} borderRadius={"br-box"} />
-        <Carousel _Itsposition={"left"} borderRadius={"br-box"} />
+        {/* <Carousel _Itsposition={"right"} borderRadius={"br-box"} />
+        <Carousel _Itsposition={"left"} borderRadius={"br-box"} /> */}
         <div className="slide-img d-flex">
           {imgs.map((image, index) => {
             if (index == 0)
               return (
                 <Img
+                  key={image}
                   classname={"pl-10 res-img"}
                   alt={alts[index]}
                   address={image}

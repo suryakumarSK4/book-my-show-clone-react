@@ -21,6 +21,7 @@ function navBottom() {
           {left_names.map((name, index) => {
             return (
               <ALinks
+                key={name}
                 val={index}
                 address={"#"}
                 classname={"left-link"}
@@ -34,6 +35,7 @@ function navBottom() {
             let len = left_names.length + index;
             return (
               <ALinks
+                key={name}
                 address={"#"}
                 classname={"right-link"}
                 name={name}

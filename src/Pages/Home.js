@@ -11,10 +11,13 @@ import Events from "../components/EventsNearYou/Events";
 import Footer from "../components/Footer/Footer";
 import Contact from "../components/Contact/Contact";
 import ResItem from "../components/Res-Items/ResItem";
+import ResNav from "../components/Res-Nav/ResNav";
+import ResFooter from "../components/ResFooter/ResFooter";
 function Home() {
   return (
     <div>
       <div className="full-page">
+        <ResNav />
         <NavBar />
         <NavBottom />
         <ResNavList />
@@ -27,6 +30,7 @@ function Home() {
         <ResItem />
         <Events />
         <Contact />
+        <ResFooter />
         <Footer />
       </div>
     </div>

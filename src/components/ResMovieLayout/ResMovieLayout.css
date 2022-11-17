@@ -1,0 +1,29 @@
+.res-mv {
+  width: 92%;
+  margin: 0px auto;
+}
+.top {
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid rgb(229, 229, 229);
+  margin-bottom: 10px;
+}
+.bg-mv {
+  max-width: 736px;
+  max-height: 368px;
+  height: auto;
+  width: 100%;
+}
+.left-move {
+}
+.left-move span {
+  font-weight: 100;
+}
+.left-move p {
+  padding: 0 10px;
+}
+@media screen and (max-width: 768px) {
+  .res-mv {
+    display: block;
+  }
+}

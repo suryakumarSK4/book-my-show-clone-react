@@ -12,29 +12,24 @@ function SeatLayout() {
   let { username, setUsername } = useContext(seatContext);
   const [state, setState] = useState([]);
 
-  let [pay, setPay] = useState(0);
+  var [pay, setPay] = useState(0);
   let [mySet, newSet] = useState(new Set());
-  let clicked_array = [];
+
   useEffect(() => {
     getData();
   }, []);
 
-  var value = 0;
-  let oldPrice = 0;
-
-  function addAmount(value) {
-    oldPrice += value.price;
-    console.log(oldPrice);
-  }
   function active(row) {
-    newSet(mySet.add(row));
-    // console.log(pay + " " + [...mySet].join(" ") + " " + mySet.size);
+    setPay(pay + row.price);
 
-    setUsername([...mySet]);
+    newSet(mySet.add(row.seat_no));
   }
+
   function sendData() {
     let str = [...mySet].join(" ");
-    fetch("http://192.168.1.23:3000/api/v1/book/bookMovieTickets", {
+    setUsername([...mySet, pay.toString()]);
+    console.log(pay);
+    fetch("http://192.168.1.109:3000/api/v1/book/bookMovieTickets", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -64,10 +59,11 @@ function SeatLayout() {
   async function getData() {
     try {
       const data = await axios.get(
-        "http://192.168.1.23:3000/api/v1/getData/getSeats?theater_id=1&screen_no=1&timing_id=1"
+        "http://192.168.1.109:3000/api/v1/getData/getSeats?theater_id=1&screen_no=1&timing_id=1"
       );
 
       if (data) {
+        // console.log(data);
         setState(data.data, data.data.price);
       }
 
@@ -110,8 +106,7 @@ function SeatLayout() {
                             onClick={(e) => {
                               e.target.classList.toggle(`activeClicked`);
                               e.target.classList.remove("active");
-                              active(col.seat_no);
-                              setPay(pay + col.price);
+                              active(col);
                             }}
                           >
                             {ind + 1}
@@ -212,11 +207,12 @@ function SeatLayout() {
           }
         </div>
       </div> */}
+
       <div className="selectedSeats d-flex align-center justify-center">
         <Link to={"/BookTickets"}>
           <Button
-            value={`${pay}`}
-            classname={"red-button"}
+            value={pay}
+            classname={"red-button mb-5 mt-5"}
             callback={sendData}
           />
         </Link>

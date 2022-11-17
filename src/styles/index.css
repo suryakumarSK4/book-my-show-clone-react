@@ -111,6 +111,9 @@ code {
 .mb-5 {
   margin-bottom: 5px;
 }
+.mt-5 {
+  margin-top: 5px;
+}
 .m-10 {
   margin: 10px;
 }
@@ -240,9 +243,7 @@ code {
   .moving-icon-2 {
     display: none;
   }
-  .res-foot-full {
-    display: block;
-  }
+
   .nav-full {
     position: sticky;
     top: 0;
@@ -282,9 +283,7 @@ code {
   .nav-bar {
     display: none;
   }
-  .res-nav {
-    display: block;
-  }
+
   .t-search {
     display: none;
   }
@@ -292,12 +291,6 @@ code {
     padding-top: 0px;
   }
   .gotohome {
-    display: none;
-  }
-  .con-full {
-    display: none;
-  }
-  .customer-serv {
     display: none;
   }
 
@@ -344,10 +337,14 @@ code {
     padding: 2px 0;
   }
 }
-
+@media only screen and (max-width: 1320px) {
+  .booking-summary {
+    margin-top: 20px;
+  }
+}
 @media only screen and (max-width: 1024px) {
-  * {
-    font-size: 12px;
+  .booking-summary {
+    margin-top: 20px;
   }
   .moving-icon {
     display: none;
@@ -372,6 +369,9 @@ code {
 }
 
 @media only screen and (max-width: 620px) {
+  .res-foot-full {
+    display: block;
+  }
   .img-one img {
     height: 160px;
     width: 160px;
@@ -399,13 +399,47 @@ code {
     display: none;
   }
 }
-@media only screen and (max-width: 770px) {
+@media only screen and (max-width: 768px) {
+  .footer {
+    display: none;
+  }
+  .con-full {
+    display: none;
+  }
+  .customer-serv {
+    display: none;
+  }
+  .resBookTickets {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: white;
+    border-top: 1px solid rgb(229, 229, 229);
+  }
+  .resBookTickets button {
+    width: 90%;
+    height: 40px;
+    margin: 7px 25px 7px 25px;
+  }
+  .backGround {
+    display: none;
+  }
+  .nav {
+    display: none;
+  }
+  .head-parent {
+    display: none;
+  }
+  .res-nav-height {
+    display: block;
+  }
   .img-one img {
     width: 175px;
     height: 175px;
   }
   .movie-list-one {
-    height: 350px;
+    height: 400px;
   }
   .head-parent .right-con {
     display: none;
@@ -414,14 +448,14 @@ code {
     height: auto;
     width: 140px;
   }
-  .container {
-    /* width: 100%; */
-  }
   .nav-right .head-input {
     width: 300px;
   }
 }
 @media only screen and (max-width: 563px) {
+  * {
+    font-size: 12px;
+  }
   .img-one img {
     height: 150px;
     width: 150px;
@@ -445,8 +479,15 @@ code {
     height: auto;
     width: 125px;
   }
-  .footer {
-    display: none;
+}
+
+@media only screen and (max-width: 854px) {
+  .filters {
+    border-top: 1px solid black;
+    margin-top: 5px;
+  }
+  .searchSVG {
+    border-right: 0.2px solid black;
   }
 }
 @media only screen and (max-width: 435px) {
