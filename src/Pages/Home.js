@@ -3,7 +3,7 @@ import ResNavList from "../components/ResNavList/resNavList";
 import NavBar from "../components/nav-bar/navBar";
 import NavBottom from "../components/navBar-bottom/navBottom";
 import SliderMovies from "../components/SliderMovies/SliderMovies";
-import MovieList from "../components/MovieList/MovieList";
+import Mv from "../components/MovieList/Mv";
 import Stream from "../components/Stream/Stream";
 import Entertainment from "../components/Entertainment/Entertainment";
 import Premiere from "../components/Premiere/Premiere";
@@ -23,7 +23,7 @@ function Home() {
         <ResNavList />
         <SliderMovies />
 
-        <MovieList />
+        <Mv />
         <Stream />
         <Entertainment />
         <Premiere />

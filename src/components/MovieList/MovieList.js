@@ -4,15 +4,13 @@ import Content from "../Contents/Content";
 import Img from "../ImageComp/img";
 import "./MovieList.css";
 import { Link } from "react-router-dom";
-import {
-  movieImages,
-  movie_names,
-  movie_category,
-} from "../MovieDetails/MovieDetails";
+// import {
+//   movieImages,
+//   movie_names,
+//   movie_category,
+// } from "../MovieDetails/MovieDetails";
 
-import Cards_HeadLine from "../Cards_HeadLine/Cards_HeadLine";
-
-function MovieList() {
+function MovieList({ images, title, cont }) {
   // carousel
 
   const useResize = (myRef) => {
@@ -117,11 +115,7 @@ function MovieList() {
           </div>
         </div>
       </div> */}
-      <Cards_HeadLine
-        font_size={"f-rem"}
-        font_weight={"fw-700"}
-        value={"Recommended Movies"}
-      />
+
       {/* <div className=""></div> */}
 
       <div className="carousel-container container" ref={carousel}>
@@ -130,7 +124,7 @@ function MovieList() {
             ref={track}
             className={`${Contentwidth > 768 ? "track" : "res-track"}`}
           >
-            {movieImages.map((image, index) => {
+            {images.map((image, index) => {
               return (
                 <Link to={`/movie/${index}`} style={{ textDecoration: "none" }}>
                   <div className="movie-img" key={index}>
@@ -142,11 +136,11 @@ function MovieList() {
                     />
                     <Content
                       classname={"m-name  black fw-700"}
-                      value={movie_names[index]}
+                      value={title[index]}
                     />
                     <Content
                       classname={"m-catg black fw-700"}
-                      value={movie_category[index]}
+                      value={cont[index]}
                     />
                   </div>
                 </Link>

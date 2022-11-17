@@ -363,15 +363,12 @@ code {
   width: 300px;
   } */
 
-  .movie-list-one {
+  .mv {
     height: 450px;
   }
 }
 
 @media only screen and (max-width: 620px) {
-  .res-foot-full {
-    display: block;
-  }
   .img-one img {
     height: 160px;
     width: 160px;
@@ -402,6 +399,9 @@ code {
 @media only screen and (max-width: 768px) {
   .footer {
     display: none;
+  }
+  .res-foot-full {
+    display: block;
   }
   .con-full {
     display: none;
@@ -438,7 +438,7 @@ code {
     width: 175px;
     height: 175px;
   }
-  .movie-list-one {
+  .mv {
     height: 400px;
   }
   .head-parent .right-con {
@@ -460,7 +460,7 @@ code {
     height: 150px;
     width: 150px;
   }
-  .movie-list-one {
+  .mv {
     height: 350px;
   }
   .left {

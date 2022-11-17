@@ -193,3 +193,6 @@
 .next.hide {
   display: none;
 }
+.mv {
+  background-color: #f5f5f5;
+}

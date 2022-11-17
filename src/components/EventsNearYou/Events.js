@@ -1,5 +1,7 @@
 import React from "react";
 import Img from "../ImageComp/img";
+import MovieList from "../MovieList/MovieList";
+
 import "./Events.css";
 function Events() {
   let events = [
@@ -25,9 +27,9 @@ function Events() {
       <div className="eve-cont container">
         <h2>Events Happening Near You</h2>
       </div>
-      <div className="eve-imgs container ">
-        <div className="eve-img res-div">
-          {events.map((event) => {
+      <div className="eve-imgs  ">
+        <div className=" res-div">
+          {/* {events.map((event) => {
             return (
               <>
                 <div className="eve-img-one">
@@ -43,7 +45,9 @@ function Events() {
                 </div>
               </>
             );
-          })}
+          })} */}
+
+          <MovieList images={events} title={names} cont={""} />
         </div>
       </div>
     </div>
