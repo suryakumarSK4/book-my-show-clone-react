@@ -4,7 +4,15 @@
   width: 549px;
   height: 36px;
   border-radius: 4px;
+  cursor: pointer;
+}
+.bgColor {
   background-color: white;
+}
+.dark {
+  background-color: black;
+  border: 1px solid #9c9b99;
+  color: white;
 }
 .inside-svg {
   width: 39px;

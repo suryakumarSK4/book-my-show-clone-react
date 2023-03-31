@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import ResNavList from "../components/ResNavList/resNavList";
 import NavBar from "../components/nav-bar/navBar";
 import NavBottom from "../components/navBar-bottom/navBottom";
@@ -16,23 +16,20 @@ import ResFooter from "../components/ResFooter/ResFooter";
 function Home() {
   return (
     <div>
-      <div className="full-page">
-        <ResNav />
-        <NavBar />
-        <NavBottom />
-        <ResNavList />
-        <SliderMovies />
-
-        <Mv />
-        <Stream />
-        <Entertainment />
-        <Premiere />
-        <ResItem />
-        <Events />
-        <Contact />
-        <ResFooter />
-        <Footer />
-      </div>
+      <ResNav />
+      <NavBar />
+      <NavBottom />
+      <ResNavList />
+      <SliderMovies />
+      <Mv />
+      <Stream />
+      <Entertainment />
+      <Premiere />
+      <ResItem />
+      <Events />
+      <Contact />
+      <ResFooter />
+      <Footer />
     </div>
   );
 }

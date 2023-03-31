@@ -1,5 +1,5 @@
 import React, { useContext, useEffect, useState } from "react";
-import { seatContext } from "../../Pages/Router";
+import { seatContext } from "../../Pages/AppRouter";
 import "./SeatLayout.css";
 import { left, right } from "./Total-seat.js";
 import Button from "../Button/button";

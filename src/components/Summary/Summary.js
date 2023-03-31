@@ -4,7 +4,7 @@ import NavBar from "../nav-bar/navBar";
 import NavBottom from "../navBar-bottom/navBottom";
 import Button from "../Button/button";
 import { Link } from "react-router-dom";
-import { seatContext } from "../../Pages/Router";
+import { seatContext } from "../../Pages/AppRouter";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";

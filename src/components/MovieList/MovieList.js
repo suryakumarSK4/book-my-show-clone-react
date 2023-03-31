@@ -36,16 +36,16 @@ function MovieList({ images, title, cont }) {
   };
   const componentRef = useRef();
   const { width, height } = useResize(componentRef);
-  console.log(width);
+  // console.log(width);
   const prev = useRef();
   const next = useRef();
   const carousel = useRef();
   const track = useRef();
   let Contentwidth = width;
   let index = 0;
-  // window.addEventListener("resize", function () {
-  //   Contentwidth = carousel.offsetWidth;
-  // });
+  window.addEventListener("resize", function () {
+    Contentwidth = carousel.offsetWidth;
+  });
   function forward(e) {
     console.log(e);
     e.preventDefault();

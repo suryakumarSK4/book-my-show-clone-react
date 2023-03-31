@@ -11,7 +11,7 @@ import TheatreLayout from "./TheatreLayout";
 import BookShow from "./BookShow";
 import Payment from "./Payment";
 export let seatContext = createContext();
-function Router() {
+function AppRouter() {
   let [username, setUsername] = useState([]);
   let seatCountProvider = useMemo(
     () => ({
@@ -33,7 +33,6 @@ function Router() {
           <Route path="/TheatreLayout" element={<TheatreLayout />}></Route>
           <Route path="/BookTickets" element={<BookShow />}></Route>
           <Route path="/Payment" element={<Payment />}></Route>
-
           <Route path="*" element={<NotFound />}></Route>
         </Routes>
       </seatContext.Provider>
@@ -41,4 +40,4 @@ function Router() {
   );
 }
 
-export default Router;
+export default AppRouter;

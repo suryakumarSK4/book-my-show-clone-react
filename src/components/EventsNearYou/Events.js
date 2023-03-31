@@ -19,8 +19,27 @@ function Events() {
 
   let names = [
     "Alexperience",
-    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai",
-    "3.77 kms away",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+    "Alexperience",
+  ];
+  let addresses = [
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
+    "Sir Mutha Venkatasubba Rao Concert Hall: Chennai,3.77 kms away",
   ];
   return (
     <div className="events event-pad">
@@ -47,7 +66,7 @@ function Events() {
             );
           })} */}
 
-          <MovieList images={events} title={names} cont={""} />
+          <MovieList images={events} title={names} cont={addresses} />
         </div>
       </div>
     </div>

@@ -1,12 +1,12 @@
 import React from "react";
 import { BrowserRouter } from "react-router-dom";
-import Router from "./Pages/Router";
+import AppRouter from "./Pages/AppRouter";
 
 function App() {
   return (
     <>
       <BrowserRouter>
-        <Router />
+        <AppRouter />
       </BrowserRouter>
     </>
   );
